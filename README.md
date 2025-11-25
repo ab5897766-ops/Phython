@@ -1,63 +1,25 @@
-#15
-nums = list(map(int, input("숫자 10개를 입력하세요: ").split()))
-print(min(nums))
-print(max(nums))
+#25
+input().split()으로 문자열을 공백 기준으로 나눔
+zip()으로 키와 값을 묶고, map(int, ...)으로 값을 정수로 변환
+dict()로 딕셔너리 생성
 
-입력받은 숫자 10개 중에서 가장 작은 값과 큰 값을 출력하기 위해 min, max를 사용했다.
+#26
+딕셔너리에서 'english' 키의 값을 출력
 
-#16
-nums = list(map(int, input("숫자 10개를 입력하세요: ").split()))
-result = sum(nums) - min(nums) - max(nums)
-print(result)
+#27
+딕셔너리에서 'english' 키의 값을 출력
 
-전체 합에서 최솟값과 최댓값을 빼면 나머지 값들의 합이 되기 때문에 그렇게 계산했다.
+#28
+'english' in lee로 키 존재 여부 확인
+ del lee['english']로 해당 키-값 삭제
 
-#17
-a = [10, 20, 30, 40, 30, 20, 10]
-a = [x for x in a if x != 20]
-print(a)
+#29
+dict.items()를 사용하면 (키, 값) 쌍을 반복문으로 출력 가능
 
+#30
+dictionary comprehension으로 조건에 맞는 항목만 필터링
+.keys()로 키만 출력
 
-리스트에서 20을 모두 없애려면 20이 아닌 값만 남기면 된다
-
-#18
-nums = [x for x in range(1, 6)]
-print(nums)
-
-1부터 5까지 리스트를 만들기 위해 range(1, 6)을 그대로 리스트 컴프리헨션에 넣었다.
-
-#19
-odds = [x for x in range(1, 21) if x % 2 == 1]
-print(odds)
-
-홀수만 출력해야 하니까 x % 2 == 1 조건을 걸었다
-
-#20
-n1, n2 = map(int, input().split())
-p = [2**i for i in range(n1, n2+1)]
-print(p[:1] + p[2:-1])
-
-입력받은 범위로 2의 거듭제곱 리스트를 만들고, 두 번째랑 네 번째 값을 빼고 출력한 것이다.
-
-#21
-text = input()
-print(text.replace("Hello", "Hi"))
-
-입력된 문자열에서 "Hello"를 "Hi"로 바꾸기 위해 replace()를 썼다.
-
-#22
-print("/".join(input().split()))
-
-입력받은 문자열 4개를 공백 기준으로 나눈 뒤, /로 연결하려고 split()과 join()을 썼다.
-
-#23
-print(input().lower().rjust(10))
-
-입력된 성을 소문자로 바꾸고, 길이 10 기준으로 오른쪽 정렬하려고 lower()와 rjust(10)을 썼다.
-
-#24
-print(sorted(map(int, input().split(";")), reverse=True))
-
-세미콜론으로 구분된 가격들을 정수로 바꾼 뒤, 내림차순 정렬하려고 split(";"), map(int, ...), sorted(..., reverse=True)를 썼다.
-
-
+#31
+sum()과 len()으로 평균 계산
+ :.2f는 소수점 둘째 자리까지 출력
