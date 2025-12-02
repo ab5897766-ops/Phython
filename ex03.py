@@ -1,57 +1,56 @@
-#32
-a = {3, 7, 11, 13, 17}
-b = {17, 21, 23, 27, 31}
+# 39
+def print_odds(n):
+    for i in range(n + 1):
+        if i % 2 == 1:
+            print(i)
+num = int(input())
+print_odds(num)
 
-print(a | b) 
-print(a & b)  
+# 40
+def print_multiples_of_3(n):
+    if n % 3 == 0:
+        print(n)
+num = int(input())
+print_multiples_of_3(num)
 
-#33
-a = {3, 7, 11, 13, 17}
-b = {17, 21, 23, 27, 31}
+# 41
+def max_min(a, b, c, d):
+    return max(a, b, c, d), min(a, b, c, d)
+scores = [int(input()) for _ in range(4)]
+maximum, minimum = max_min(*scores)
+print(maximum, minimum)
 
-print(a - b)
-print(a ^ b)
+# 42
+def print_odds(n):
+    for i in range(n + 1):
+        if i % 2 == 1:
+            print(i)
+num = int(input())
+print_odds(num)
 
-#34
-a = {3, 7, 11, 13, 17}
-b = {21, 23, 27, 31, 33}
+# 43
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+num = int(input())
+print(factorial(num))
 
-a.update(b)
-print(a)
+# 44
+def sum_products_over_30(i, j):
+    total = 0
+    for x in range(1, i + 1):
+        for y in range(1, j + 1):
+            if x * y >= 30:
+                total += x * y
+    return total
+i = int(input())
+j = int(input())
+print(sum_products_over_30(i, j))
 
-#35
-a = {100, 200, 300, 400, 500}
-b = {400, 500, 600, 700, 800}
-
-x = a.copy()
-x.intersection_update(b)
-print(x)
-
-y = a.copy()
-y.difference_update(b)
-print(y)
-
-z = a.copy()
-z.symmetric_difference_update(b)
-print(z)
-
-#36
-a = {100, 200, 300, 400, 500}
-b = {100, 200, 300, 400, 500}
-
-if a.issuperset(b) and a.issubset(b):
-    print("동시")
-elif a.issuperset(b):
-    print("상위")
-elif a.issubset(b):
-    print("부분")
-
-#37
-a = {3, 7, 11, 13, 17}
-a.add(1000)
-a.pop()
-print(a)
-
-#38
-multiples = {x for x in range(1, 101) if x % 3 == 0 and x % 5 == 0}
-print(multiples)
+# 45
+def sum_list(lst):
+    return sum(lst)
+a = [1, 2, 3, 4, 5]
+print(sum_list(a))
